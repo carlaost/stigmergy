@@ -8,8 +8,14 @@
     },
     "content_scripts": [
       {
-        "matches": ["*://arxiv.org/abs/*"],
-        "js": ["content.js"]
+        "matches": [
+          "*://arxiv.org/abs/*",
+          "*://arxiv.org/pdf/*",
+          "*://arxiv.org/html/*",
+          "*://arxiv.org/format/*"
+        ],
+        "js": ["content.js"],
+        "run_at": "document_idle"
       }
     ],
     "action": {
@@ -21,4 +27,4 @@
       }
     }
   }
-  
+    
